@@ -49,9 +49,9 @@ while True:
         if len(data) == 0: break
         print "recieved [%s]" % data
         if data == 'Work':
-            client_sock.send("%s,%s" % (temp_f,temp_c))
-            print(read_temp())
-            time.sleep(5)
+            print("here")
+            temp_f, temp_c = read_temp()
+            client_sock.send("%s,    %s!" % (temp_f,temp_c))
+            #print(read_temp())
     except Exception as e:
         pass
-
